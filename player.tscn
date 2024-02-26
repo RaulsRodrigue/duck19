@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bctuwr6v8boe3"]
+
+[ext_resource type="Texture2D" uid="uid://sbngdiehboho" path="res://Módulo/Módulo II/Art Assets/Art Assets/Characters/Duck/Duck (16x16).png" id="1_f34vg"]
+[ext_resource type="Script" path="res://ScriptDuck/player.gd" id="1_pe1a6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uufja"]
+size = Vector2(16, 16)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_pe1a6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(320, 200)
+shape = SubResource("RectangleShape2D_uufja")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, 200)
+texture = ExtResource("1_f34vg")
+hframes = 2
